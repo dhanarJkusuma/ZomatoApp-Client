@@ -3,17 +3,17 @@ import { ActivatedRoute, Params } from '@angular/router';
 import { CityService } from '../city.service';
 import { CollectionsResponse } from '../models/collection_response';
 import { CollectionSingle } from '../models/collection_single';
-import { RestorantItem } from './restorant_item.component';
+import { CollectionItem } from './collection_item.component';
 
 @Component({
-  selector: 'restorant',
-  templateUrl: './restorant.component.html',
-  styleUrls: ['./restorant.component.css'],
+  selector: 'collection',
+  templateUrl: './collection.component.html',
+  styleUrls: ['./collection.component.css'],
   providers:[
     CityService
   ]
 })
-export class RestorantComponent implements OnInit {
+export class CollectionComponent implements OnInit {
 
   private collections : CollectionSingle[];
 

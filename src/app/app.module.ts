@@ -6,18 +6,24 @@ import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { SearchComponent } from './search/search.component';
 import { CityComponent } from './search/city.component';
-import { RestorantItem } from './restorant/restorant_item.component';
-import { RestorantComponent } from './restorant/restorant.component';
+import { CollectionItem } from './collection/collection_item.component';
+import { CollectionComponent } from './collection/collection.component';
 import { DetailComponent } from './detail/detail.component';
+import { RestaurantComponent } from './restaurant/restaurant.component';
+import { RestaurantItem } from './restaurant/restaurant_item.component';
+import { MapComponent } from './detail/map.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SearchComponent,
     CityComponent,
-    RestorantComponent,
-    RestorantItem,
-    DetailComponent
+    CollectionComponent,
+    CollectionItem,
+    DetailComponent,
+    RestaurantComponent,
+    RestaurantItem,
+    MapComponent
   ],
   imports: [
     BrowserModule,
@@ -32,8 +38,14 @@ import { DetailComponent } from './detail/detail.component';
         redirectTo: '/home',
         pathMatch: 'full'
       },{
-        path:'restorant/:id',
-        component: RestorantComponent
+        path:'collection/:id',
+        component: CollectionComponent
+      },{
+        path: 'restaurant/:collectionId',
+        component: RestaurantComponent
+      },{
+        path: 'detail/:id',
+        component: DetailComponent
       }
     ])
   ],
